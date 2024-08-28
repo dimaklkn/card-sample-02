@@ -1,0 +1,160 @@
+:root {
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-400: hsl(228, 11%, 91%);
+  --clr-neutral-600: hsl(230, 27%, 96%);
+  --clr-text: hsl(234, 18%, 23%);
+  --clr-accent: hsl(44, 100%, 50%);
+
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.25rem;
+  --fw-400: 400;
+  --fw-500: 700;
+
+  --ff-body: monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: var(--clr-neutral-400);
+  font-family: var(--ff-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.card {
+  width: 900px;
+  display: grid;
+  gap: 2rem;
+  background-color: var(--clr-neutral-100);
+  padding: 3rem 3rem 4rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.card__header {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-500);
+}
+
+.card__container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.card__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card__feature-item {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.card__feature-item:hover {
+  background-color: var(--clr-accent);
+  svg {
+    color: var(--clr-accent);
+    background-color: white;
+  }
+}
+
+.card__feature-item svg {
+  width: 3rem;
+  border-radius: 50%;
+  color: white;
+  background-color: var(--clr-accent);
+  padding: 0.5rem;
+}
+
+.card__feature-title {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-500);
+}
+
+.card__blog {
+  display: grid;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem var(--clr-neutral-400),
+    -0.1rem -0.1rem 0.5rem var(--clr-neutral-100);
+}
+
+.card__blog-title {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-500);
+  margin-left: 1rem;
+}
+
+.card__blog-article {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card__blog-article:hover {
+  background-color: var(--clr-neutral-400);
+}
+
+.card__blog-article-title {
+  font-weight: var(--fw-500);
+}
+
+.card__blog-article-author {
+  color: var(--clr-accent);
+}
